@@ -1,4 +1,5 @@
 import React from 'react';
+import Header from './elements'
 import logo, { ReactComponent } from './logo.svg'; 
 import './App.css';
 
@@ -9,6 +10,7 @@ class CityExplorerReact extends React.Component {
       thing: 'idk something'
     }
   }
+
 
   render(){
     return(
@@ -21,14 +23,14 @@ class CityExplorerReact extends React.Component {
 }
 
 
-
-
 class App extends React.Component {
   render(){
     return(
       <React.Fragment>
-         <CityExplorerReact />
+         {/* <CityExplorerReact /> */}
+         <Header />
       </React.Fragment>  
+      
     )
   }
 }
