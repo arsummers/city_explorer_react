@@ -62,3 +62,14 @@ Start time: 1524
 Finish time: 1530
 
 Actual time needed to complete: 6 minutes
+
+
+Number and name of feature: Search form refactor
+
+Estimate of time needed to complete: 30 minutes
+
+Start time: 1643
+
+Finish time: 1530
+
+Actual time needed to complete: 6 minutes

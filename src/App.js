@@ -1,8 +1,6 @@
 import React from 'react';
 import Header from './components/header';
 import Main from './components/main';
-
-import logo, { ReactComponent } from './logo.svg'; 
 import './App.css';
 
 

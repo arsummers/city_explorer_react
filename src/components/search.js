@@ -1,25 +1,28 @@
 import React from 'react';
 
-class Search extends React.Component {
+//TODO: pass infomation to Map
+
+class SearchForm extends React.Component {
     constructor(props){
         super(props);
         this.state = {
-            prompt: 'Search A City'
+            queury : ''
         }
     }
 
-    handleSumbit = () =>{
+    handleSumbit = e =>{
         alert('You have hit the search button')
     }
 
     render(){
         return(
          <form onSubmit = {this.handleSumbit}> 
-            <button>{this.props.prompt}</button>
+            <input value = {this.state.query}></input>
+            <button>search</button>
         </form>
         )
        
     }
 }
 
-export default Search;
+export default SearchForm;
