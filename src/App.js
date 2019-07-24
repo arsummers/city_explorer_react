@@ -1,5 +1,6 @@
 import React from 'react';
-import Header from './elements'
+import Header from './header'
+import Main from './main'
 import logo, { ReactComponent } from './logo.svg'; 
 import './App.css';
 
@@ -29,6 +30,7 @@ class App extends React.Component {
       <React.Fragment>
          {/* <CityExplorerReact /> */}
          <Header />
+         <Main />
       </React.Fragment>  
       
     )

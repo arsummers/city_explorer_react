@@ -15,16 +15,16 @@ Estimate of time needed to complete: 20 minutes
 
 Start time: 1547
 
-Finish time: _____
+Finish time: 1633
 
-Actual time needed to complete: _____
+Actual time needed to complete: 45 mins
 
 
 Number and name of feature: Main Component
 
-Estimate of time needed to complete: _____
+Estimate of time needed to complete: 30 minutes
 
-Start time: _____
+Start time: 1635
 
 Finish time: _____
 
