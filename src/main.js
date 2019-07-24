@@ -1,36 +1,19 @@
 import React from 'react'; 
+import Search from './search';
+import Maps from './map';
+import Result from './result'
+
 
 class Main extends React.Component{
-    constructor(props){
-        super(props);
-        this.state={
-            darkSkyHolder: 'Dark Sky API',
-            yelpHoder: 'Yelp API',
-            eventsHolder: 'Events API',
-            moviesHolder: 'Movies API',
-            trailsHolder: 'Trails API'
-        }
-    }
 
     render(){
         return (
-            <div>
-                <section>
-                    {this.state.darkSkyHolder}
-                </section>
-                <section>
-                    {this.state.yelpHoder}
-                </section>
-                <section>
-                    {this.state.eventsHolder}
-                </section>
-                <section>
-                    {this.state.moviesHolder}
-                </section>
-                <section>
-                    {this.state.trailsHolder}
-                </section>
-            </div>
+            <React.Fragment>
+                <Search />
+                <Maps />
+                <Result />
+            </React.Fragment>
+
         )
     }
 }

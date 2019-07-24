@@ -1,12 +1,12 @@
 Number and name of feature: App Component
 
-Estimate of time needed to complete: _____
+Estimate of time needed to complete: _unknown - relied on everything else
 
 Start time: _____
 
 Finish time: _____
 
-Actual time needed to complete: _____
+Actual time needed to complete: 1:50 from start to finish
 
 
 Number and name of feature: Header Component
@@ -55,10 +55,10 @@ Actual time needed to complete: 4 minutes
 
 Number and name of feature: Result Component
 
-Estimate of time needed to complete: _____
+Estimate of time needed to complete: 15 minutes
 
-Start time: _____
+Start time: 1524
 
-Finish time: _____
+Finish time: 1530
 
-Actual time needed to complete: _____
+Actual time needed to complete: 6 minutes
