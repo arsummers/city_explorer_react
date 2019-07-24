@@ -1,7 +1,7 @@
 import React from 'react'; 
 import Search from './search';
-import Maps from './map';
-import Result from './result'
+import Maps from './map.js';
+import Result from './result.js'
 
 
 class Main extends React.Component{
