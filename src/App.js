@@ -1,6 +1,8 @@
 import React from 'react';
-import Header from './header'
-import Main from './main'
+import Header from './header';
+import Main from './main';
+import Search from './search';
+import Maps from './map';
 import logo, { ReactComponent } from './logo.svg'; 
 import './App.css';
 
@@ -28,9 +30,10 @@ class App extends React.Component {
   render(){
     return(
       <React.Fragment>
-         {/* <CityExplorerReact /> */}
          <Header />
          <Main />
+         <Search />
+         <Maps />
       </React.Fragment>  
       
     )

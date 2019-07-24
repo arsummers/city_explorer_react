@@ -1,12 +1,9 @@
-import React from 'react';
+import React from 'react'; 
 
 class Main extends React.Component{
     constructor(props){
         super(props);
         this.state={
-            searchBox: 'search box here',
-            searchButton: 'search',
-            mapHolder: 'map placeholder - div that will holder an embedded map',
             darkSkyHolder: 'Dark Sky API',
             yelpHoder: 'Yelp API',
             eventsHolder: 'Events API',
@@ -18,14 +15,6 @@ class Main extends React.Component{
     render(){
         return (
             <div>
-                <div>
-                    {this.state.searchBox}
-                    <button>{this.state.searchButton}</button>
-                </div>
-                    {this.state.mapHolder}
-                <div>
-
-                </div>
                 <section>
                     {this.state.darkSkyHolder}
                 </section>

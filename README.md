@@ -26,31 +26,31 @@ Estimate of time needed to complete: 30 minutes
 
 Start time: 1635
 
-Finish time: _____
+Finish time: 1700
 
-Actual time needed to complete: _____
+Actual time needed to complete:25 minutes
 
 
 Number and name of feature: Search Component
 
-Estimate of time needed to complete: _____
+Estimate of time needed to complete: 30 minutes
 
-Start time: _____
+Start time: 1704
 
-Finish time: _____
+Finish time: 1514
 
-Actual time needed to complete: _____
+Actual time needed to complete: 10 minutes
 
 
 Number and name of feature: Map Component
 
-Estimate of time needed to complete: _____
+Estimate of time needed to complete: 15 minutes
 
-Start time: _____
+Start time: 1715
 
-Finish time: _____
+Finish time: 1719
 
-Actual time needed to complete: _____
+Actual time needed to complete: 4 minutes
 
 
 Number and name of feature: Result Component
