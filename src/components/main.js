@@ -21,7 +21,7 @@ class Main extends Component{
     async getDataFromAPI(urlBase, location, resourceName){
         const queryBitsForUrl = `data[formatted_query]=${location.formatted_query}&data[latitude]=${location.latitude}&data[longitude]=${location.longitude}&data[search_query]=${location.search_query}`;
 
-        const fullUrl = `${urlBase}/${resourceName}/${queryBitsForUrl}`;
+        const fullUrl = `${urlBase}/${resourceName}?${queryBitsForUrl}`;
 
         const response = await superagent.get(fullUrl);
 
@@ -35,7 +35,8 @@ class Main extends Component{
         const locationData = await superagent.get(`${url}/location?data${query}`)
 
         const location = {
-            search_query : locationData.body.search_query,
+            search_query : query,
+            // search_query : locationData.body.search_query,
             formatted_query : locationData.body.formatted_query,
             latitude : locationData.body.latitude,
             longitude : locationData.body.longitude

@@ -4,7 +4,7 @@ export default class SearchForm extends Component {
     constructor(props){
         super(props);
         this.state = {
-            queury : ''
+            query : ''
         }
     }
 
