@@ -1,6 +1,6 @@
 import React, { Component }from 'react'; 
 import SearchForm from './search';
-import Maps from './map.js';
+import Map from './map.js';
 import SearchResults from './result.js'
 import superagent from 'superagent';
 
@@ -11,24 +11,56 @@ class Main extends Component{
         this.state = {
             location: null,
             forecasts : [],
-            movies : [],
-            events : [],
-            yelp : [],
-            trails : []
+            // movies : [],
+            // events : [],
+            // yelp : [],
+            // trails : []
         }
     }
 
-    searchEntered = query =>{
-        // how take in query???????     
-        alert(query)   
+    async getDataFromAPI(urlBase, location, resourceName){
+        const queryBitsForUrl = `data[formatted_query]=${location.formatted_query}&data[latitude]=${location.latitude}&data[longitude]=${location.longitude}&data[search_query]=${location.search_query}`;
+
+        const fullUrl = `${urlBase}/${resourceName}/${queryBitsForUrl}`;
+
+        const response = await superagent.get(fullUrl);
+
+        return response.body
     }
+
+
+    handleSearch = async query =>{
+        const url = 'https://jb-flask-hello-world.onrender.com'
+
+        const locationData = await superagent.get(`${url}/location?data${query}`)
+
+        const location = {
+            search_query : locationData.body.search_query,
+            formatted_query : locationData.body.formatted_query,
+            latitude : locationData.body.latitude,
+            longitude : locationData.body.longitude
+        }
+
+        const forecasts = await this.getDataFromAPI(url, location, 'weather');
+
+        this.setState({
+            location,
+            forecasts
+        })
+    }
+
 
     render(){
         return (
             <>
-                <SearchForm handleSubmit = {this.searchEntered}/>
-                <Maps />
-                <SearchResults />
+                <SearchForm handleSearch = {this.handleSearch}/>
+                {this.state.location && (
+                    <>
+                    <Map latitude={this.state.location.latitude} longitude={this.state.location.longitude}/>
+                    </>
+                )}
+                <SearchResults 
+                forecasts={this.state.forecasts}/>
             </>
 
         )

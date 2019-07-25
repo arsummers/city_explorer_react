@@ -1,11 +1,11 @@
 import React from 'react'; 
 
-export default (props) =>(
+export default props =>(
     <>
     <h1>Map</h1>
-    <ul>
-        <li>Latidude: {props.latitude}</li>
-        <li>Longitude: {props.longitude}</li>
-    </ul>
+   
+        <p>Latidude: {props.latitude}
+        Longitude: {props.longitude}</p>
+  
     </>
 );

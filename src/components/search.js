@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class SearchForm extends Component {
+export default class SearchForm extends Component {
     constructor(props){
         super(props);
         this.state = {
@@ -11,18 +11,18 @@ class SearchForm extends Component {
     handleInput = e =>{
         this.setState({
             query : e.target.value
-        })
+        });
     }
 
     handleSubmit = e =>{
         e.preventDefault()
-        this.props.handleSubmit(this.state.query)
+        this.props.handleSearch(this.state.query);
     }
 
     render(){
         return(
-         <form onSubmit = {this.handleSubmit}> 
-            <input value = {this.state.query} onChange = {this.handleInput}></input>
+         <form onSubmit={this.handleSubmit}> 
+            <input value={this.state.query} onChange={this.handleInput}></input>
             <button>search for a city</button>
         </form>
         )
@@ -30,4 +30,3 @@ class SearchForm extends Component {
     }
 }
 
-export default SearchForm;
