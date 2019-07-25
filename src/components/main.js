@@ -11,7 +11,7 @@ class Main extends Component{
         this.state = {
             location: null,
             forecasts : [],
-            // movies : [],
+            movies : [],
             // events : [],
             // yelp : [],
             // trails : []
@@ -36,17 +36,18 @@ class Main extends Component{
 
         const location = {
             search_query : query,
-            // search_query : locationData.body.search_query,
             formatted_query : locationData.body.formatted_query,
             latitude : locationData.body.latitude,
             longitude : locationData.body.longitude
         }
 
         const forecasts = await this.getDataFromAPI(url, location, 'weather');
+        const movies = await this.getDataFromAPI(url, location, 'movies');
 
         this.setState({
             location,
-            forecasts
+            forecasts,
+            movies
         })
     }
 
@@ -61,7 +62,9 @@ class Main extends Component{
                     </>
                 )}
                 <SearchResults 
-                forecasts={this.state.forecasts}/>
+                forecasts={this.state.forecasts}
+                movies={this.state.movies}
+                />
             </>
 
         )
