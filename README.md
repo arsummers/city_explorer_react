@@ -70,6 +70,17 @@ Estimate of time needed to complete: 30 minutes
 
 Start time: 1643
 
-Finish time: 1530
+Finish time: 1715
 
-Actual time needed to complete: 6 minutes
+Actual time needed to complete: 32 minutes
+
+
+Number and name of feature: Map linkup
+
+Estimate of time needed to complete: 1 hour
+
+Start time: unsure
+
+Finish time: not yet
+
+Actual time needed to complete: unsure - got stuck
