@@ -10,14 +10,21 @@ class SearchForm extends React.Component {
         }
     }
 
-    handleSumbit = e =>{
-        alert('You have hit the search button')
+    handleChange = e =>{
+        this.setState({
+            query : e.target.value
+        })
+    }
+
+    handleSubmit = e =>{
+        e.preventDefault()
+        this.props.handleSubmit(this.state.query)
     }
 
     render(){
         return(
-         <form onSubmit = {this.handleSumbit}> 
-            <input value = {this.state.query}></input>
+         <form onSubmit = {this.handleSubmit}> 
+            <input value = {this.state.query} onChange = {this.handleChange}></input>
             <button>search</button>
         </form>
         )
