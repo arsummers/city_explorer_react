@@ -1,6 +1,8 @@
 import React from 'react'; 
 
-class Result extends React.Component {
+// going to need component for each API call
+
+class SearchResults extends React.Component {
     constructor(props){
         super(props);
         this.state={
@@ -35,4 +37,4 @@ class Result extends React.Component {
     }
 }
 
-export default Result;
+export default SearchResults;
