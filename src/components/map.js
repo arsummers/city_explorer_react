@@ -1,21 +1,11 @@
 import React from 'react'; 
 
-class Maps extends React.Component {
-    constructor(props){
-        super(props);
-        this.state = {
-            mapHolder: 'Map will live here. This is a section'
-        }
-    }
-
-    render(){
-        return(
-            <div>
-             
-                {this.state.mapHolder}
-            </div>
-        )
-    }
-}
-
-export default Maps;
+export default props =>(
+    <>
+    <h1>Map</h1>
+   
+        <p>Latidude: {props.latitude}
+        Longitude: {props.longitude}</p>
+  
+    </>
+);

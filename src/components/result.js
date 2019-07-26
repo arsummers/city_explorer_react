@@ -1,40 +1,16 @@
 import React from 'react'; 
+import Forecasts from './api_calls/forecasts.js';
+import Movies from './api_calls/movies.js';
+import Events from './api_calls/events.js';
+import Trails from './api_calls/trails';
+// import Reviews from './api_calls/yelp';
 
-// going to need component for each API call
-
-class SearchResults extends React.Component {
-    constructor(props){
-        super(props);
-        this.state={
-            darkSkyHolder: 'Dark Sky API',
-            yelpHoder: 'Yelp API',
-            eventsHolder: 'Events API',
-            moviesHolder: 'Movies API',
-            trailsHolder: 'Trails API'
-        }
-    }
-
-    render(){
-        return (
-            <div>
-                <section>
-                    {this.state.darkSkyHolder}
-                </section>
-                <section>
-                    {this.state.yelpHoder}
-                </section>
-                <section>
-                    {this.state.eventsHolder}
-                </section>
-                <section>
-                    {this.state.moviesHolder}
-                </section>
-                <section>
-                    {this.state.trailsHolder}
-                </section>
-            </div>
-        )
-    }
-}
-
-export default SearchResults;
+export default props =>(
+    <>
+    <Forecasts data={props.forecasts}/>
+    <Movies data={props.movies}/>
+    <Events data={props.events}/>
+    <Trails data={props.trails}/>
+    {/* <Reviews data={props.reviews}/> */}
+    </>
+)
