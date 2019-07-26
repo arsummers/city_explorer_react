@@ -84,3 +84,14 @@ Start time: unsure
 Finish time: not yet
 
 Actual time needed to complete: unsure - got stuck
+
+
+Number and name of feature: Integrate SCSS
+
+Estimate of time needed to complete: 1 hour
+
+Start time: 2100
+
+Finish time: 2150
+
+Actual time needed to complete: 50 minutes
